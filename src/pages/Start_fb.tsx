@@ -20,7 +20,7 @@ function StartFB() {
               <form>
                 <div className="grid w-full items-center gap-4">
                   <div className="flex flex-col space-y-1.5">
-                    <div className="flex flex-col md:flex-row gap-2 w-full md:w-2/4 m-auto">
+                    <div className="flex gap-2 w-3/4 m-auto">
                       <Input defaultValue="+55" className="w-14" disabled />
                       <MaskedInput
                         className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
@@ -30,7 +30,7 @@ function StartFB() {
                       />
                     </div>
                   </div>
-                  <Button className="bg-emerald-500 hover:bg-emerald-500 w-2/4 m-auto">Espionar Whatsapp</Button>
+                  <Button className="bg-emerald-500 hover:bg-emerald-500 w-3/4 m-auto">Espionar Whatsapp</Button>
                 </div>
               </form>
             </CardContent>
