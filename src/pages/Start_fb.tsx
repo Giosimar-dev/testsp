@@ -9,9 +9,9 @@ function StartFB() {
       <div className="bg-emerald-500 w-full p-20"></div>
       <div className="mt-[-100px]">
         <div>
-          <Card className="w-full md:w-[600px] m-auto">
+          <Card className="w-full md:w-[600px] m-auto p-3">
             <CardHeader>
-              <img src="/Whatsapp-Icon.png" alt="WhatsApp Icon" className="ml-10 mr-10 mb-5" />
+              <img src="/Whatsapp-Icon.png" alt="WhatsApp Icon" className="ml-5 mr-5 mb-5" />
               <h1 className="text-center">
                 Informe o número do{" "}
                 <b>
