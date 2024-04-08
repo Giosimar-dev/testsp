@@ -11,9 +11,13 @@ function StartFB() {
         <div>
           <Card className="w-full md:w-[600px] m-auto">
             <CardHeader>
-              <img src="/Whatsapp-Icon.png" alt="WhatsApp Icon" className="ml-32 mr-32 mb-5" />
+              <img src="/Whatsapp-Icon.png" alt="WhatsApp Icon" className="ml-10 mr-10 mb-5" />
               <h1 className="text-center">
-                Informe o número do <b>WhatsApp que pretende espionar</b>
+                Informe o número do{" "}
+                <b>
+                  WhatsApp <br />
+                  que pretende espionar
+                </b>
               </h1>
             </CardHeader>
             <CardContent>
