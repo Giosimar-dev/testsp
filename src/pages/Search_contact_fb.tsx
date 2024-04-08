@@ -1,31 +1,9 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import MaskedInput from "react-input-mask";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ReloadIcon } from "@radix-ui/react-icons";
 
 function StartFB() {
-  const [inputValue, setInputValue] = useState("");
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
-
-  const handleButtonClick = () => {
-    const onlyDigits = inputValue.replace(/\D/g, "");
-    if (onlyDigits.length !== 11) {
-      setShowErrorMessage(true);
-      return;
-    }
-
-    setShowErrorMessage(false);
-    setIsLoading(true);
-    setTimeout(() => {
-      navigate(`/search_contactfb?contact=${onlyDigits}`);
-    }, 5000);
-  };
-
   return (
     <div>
       <div className="bg-emerald-500 w-full p-20"></div>
@@ -33,9 +11,15 @@ function StartFB() {
         <div>
           <Card className="w-full md:w-[600px] m-auto p-3">
             <CardHeader>
-              <img src="/Whatsapp-Icon.png" alt="WhatsApp Icon" className="ml-5 mr-5 mb-5" />
+              <div className="w-14">
+                <img src="/Whatsapp-Icon.png" alt="WhatsApp Icon" className="ml-5 mr-5 mb-5" />
+              </div>
               <h1 className="text-center">
-                Informe o número do <b>WhatsApp que pretende espionar</b>
+                Informe o número do{" "}
+                <b>
+                  WhatsApp <br />
+                  que pretende espionar
+                </b>
               </h1>
             </CardHeader>
             <CardContent>
@@ -48,23 +32,11 @@ function StartFB() {
                         className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                         mask="(99) 99999-9999"
                         maskChar={null}
-                        value={inputValue}
                         placeholder="(21) 99999-9999"
-                        onChange={(e) => setInputValue(e.target.value)}
                       />
                     </div>
                   </div>
-                  {showErrorMessage && <div className="text-red-500 text-center">Por favor, insira um número de telefone válido.</div>}
-                  <Button className="bg-emerald-500 hover:bg-emerald-500 w-3/4 m-auto" onClick={handleButtonClick} disabled={isLoading}>
-                    {isLoading ? (
-                      <>
-                        <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
-                        Iniciando verificação ...
-                      </>
-                    ) : (
-                      "Espionar Whatsapp"
-                    )}
-                  </Button>
+                  <Button className="bg-emerald-500 hover:bg-emerald-500 w-3/4 m-auto">Espionar Whatsapp</Button>
                 </div>
               </form>
             </CardContent>
