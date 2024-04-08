@@ -16,6 +16,7 @@ function StartFB() {
     const onlyDigits = inputValue.replace(/\D/g, "");
     if (onlyDigits.length !== 11) {
       setShowErrorMessage(true);
+      setTimeout(() => setShowErrorMessage(false), 2000);
       return;
     }
 
