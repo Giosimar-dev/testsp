@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import MaskedInput from "react-input-mask";
 import { Button } from "@/components/ui/button";
@@ -11,22 +11,22 @@ function StartFB() {
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const errorTimer = useRef<number | null>(null);
 
   const handleButtonClick = () => {
     const onlyDigits = inputValue.replace(/\D/g, "");
-    if (onlyDigits.length !== 11) {
+    if (onlyDigits.length !== 9) {
       setShowErrorMessage(true);
-      setTimeout(() => setShowErrorMessage(false), 2000);
+      if (errorTimer.current) clearTimeout(errorTimer.current);
+      errorTimer.current = window.setTimeout(() => setShowErrorMessage(false), 2000);
       return;
     }
 
-    setShowErrorMessage(false);
     setIsLoading(true);
     setTimeout(() => {
       navigate(`/search_contactfb?contact=${onlyDigits}`);
     }, 5000);
   };
-
   return (
     <div>
       <div className="bg-emerald-500 w-full p-20"></div>
