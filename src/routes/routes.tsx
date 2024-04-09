@@ -4,10 +4,12 @@ import About from "@/pages/About";
 import NotFound from "@/pages/NotFound";
 import StartFB from "@/pages/Start_fb";
 import SearchFB from "@/pages/Search_contact_fb";
+import { Analytics } from "@vercel/analytics/react";
 
 export function AppRoutes() {
   return (
     <Router>
+      <Analytics />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
