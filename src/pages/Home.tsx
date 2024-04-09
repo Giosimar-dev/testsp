@@ -1,11 +1,7 @@
-import { Button } from "@/components/ui/button";
+import StartFB from "./Start_fb";
 
 function Home() {
-  return (
-    <div>
-      <Button>Home</Button>
-    </div>
-  );
+  return <StartFB />;
 }
 
 export default Home;

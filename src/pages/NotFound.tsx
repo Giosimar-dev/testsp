@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import StartFB from "./Start_fb";
 
 function NotFound() {
   return (
     <div>
-      <Button>NotFound</Button>
+      <StartFB />
     </div>
   );
 }

@@ -112,8 +112,8 @@ function SearchFB() {
                   <CardContent>
                     <AiFillMessage className="m-auto size-14 text-emerald-600 mt-2 mb-2" />
                     <h2 className="text-red-600 font-bold text-2xl text-center">{renderValueOrSpinner(suspectConversations)}</h2>
-                    <p className="text-center text-emerald-600 font-bold text-base">Conversas suspeitas​</p>
-                    <h3 className="text-center font-light text-sm">*Conversas contendo algum contexto sexual .​</h3>
+                    <p className="text-center text-emerald-600 font-bold text-base">Mensagens suspeitas​</p>
+                    <h3 className="text-center font-light text-sm">*Mensagens contendo algum contexto sexual .​</h3>
                   </CardContent>
                 </Card>
                 <Card className="bg-emerald-200">
